@@ -1,0 +1,34 @@
+{
+  "name": "user-management",
+  "version": "1.0.0",
+  "description": "User-friendly system that allows users to manage their profiles",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NagaaSaketh/user-management-system.git"
+  },
+  "keywords": [
+    "user-management-system",
+    "react",
+    "node"
+  ],
+  "author": "Saketh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NagaaSaketh/user-management-system/issues"
+  },
+  "homepage": "https://github.com/NagaaSaketh/user-management-system#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
