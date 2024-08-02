@@ -12,7 +12,7 @@ const User = () => {
 
   console.log(userName);
   async function fetchUsers(){
-    const res = await fetch('https://ed629700-7ef0-44f7-8394-7cb3a8e2e593-00-3qpuv9bp0uu5a.riker.replit.dev/users',
+    const res = await fetch('https://usermanagement-backend-yt9m.onrender.com/users',
       {
         method:"GET",
         headers:{
