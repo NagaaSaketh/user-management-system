@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { displayUser,updateToken } from "../utils/userSlice";
 import { useNavigate } from "react-router-dom";
 import User from "./User";
+import {API_URL} from '../utils/constants'
 
 function LoginForm() {
   const [username, setUsername] = useState("");
@@ -35,7 +36,7 @@ function LoginForm() {
       setErrors(errors);
     } else {
       const userData = { email:username, password };
-      fetch("https://usermanagement-backend-yt9m.onrender.com/signin", {
+      fetch(`${API_URL}/signin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),

@@ -3,6 +3,7 @@ import LoginForm from "./LoginForm";
 import { json, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import UserList from "./UserList";
+import { API_URL } from "../utils/constants";
 
 const User = () => {
   const userName = useSelector((state) => state.user.userName);
@@ -12,7 +13,7 @@ const User = () => {
 
   console.log(userName);
   async function fetchUsers(){
-    const res = await fetch('https://usermanagement-backend-yt9m.onrender.com/users',
+    const res = await fetch(`${API_URL}/users`,
       {
         method:"GET",
         headers:{

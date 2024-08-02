@@ -24,7 +24,7 @@ const Navbar = () => {
             Logout
             </li>
           }
-          <li className="p-4 cursor-pointer">Signup</li>
+          {userName==='Guest' && <li className="p-4 cursor-pointer">Signup</li>}
         </ul>
       </div>
     </div>
