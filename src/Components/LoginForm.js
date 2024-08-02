@@ -41,7 +41,15 @@ function LoginForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
       })
-        .then((response) => response.json())
+        .then((response) => {
+          if (!response.ok) {
+            if (response.status === 401) {
+              throw new Error("Invalid credentials");
+            }
+            throw new Error("Something went wrong");
+          }
+          return response.json();
+        })
         .then((data) => {
           console.log(data)
           dispatch(displayUser(data.name))

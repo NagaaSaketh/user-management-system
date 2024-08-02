@@ -7,6 +7,7 @@ import Navbar from "./src/Components/Navbar"
 import User from "./src/Components/User"
 import { Provider } from "react-redux"
 import userStore from "./src/utils/userStore"
+import RegisterUser from "./src/Components/RegisterUser"
 
 const AppLayout = ()=>{
   return (
@@ -37,6 +38,10 @@ const appRouter = createBrowserRouter([
       {
         path:'/user',
         element:<User/>
+      },
+      {
+        path:'/register',
+        element:<RegisterUser/>
       }
     ]
   }
