@@ -51,7 +51,6 @@ function LoginForm() {
           return response.json();
         })
         .then((data) => {
-          console.log(data)
           dispatch(displayUser(data.name))
           dispatch(updateToken(data.token))
           localStorage.setItem("token",JSON.stringify(data));

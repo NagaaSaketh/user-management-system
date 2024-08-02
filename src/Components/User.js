@@ -11,7 +11,6 @@ const User = () => {
   const [users,setUsers] = useState([]);
   const isAdmin = useSelector((state) => state.user.isAdmin);
 
-  console.log(userName);
   async function fetchUsers(){
     const res = await fetch(`${API_URL}/users`,
       {
@@ -29,8 +28,6 @@ const User = () => {
     fetchUsers();
   },[jwtToken])
 
-  console.log("USERS:",users.users)
-  
   if (userName === "Guest") {
     return (
       <div className="flex flex-col justify-center items-center h-[90vh]">

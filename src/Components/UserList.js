@@ -1,8 +1,6 @@
 import React from "react";
 
 const UserList = ({ data }) => {
-  console.log("HERE:", data);
-
   return (
     <div className="w-[70%] m-auto">
       {data.map((obj) => (
